@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:travenor/Modules/Sign%20In/Sign_In.dart';
 import 'package:travenor/main.dart';
+import 'package:travenor/shared/components/constans.dart';
 import 'package:travenor/shared/style/Colors.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -7,10 +9,8 @@ Widget defaultBottom(
         {required String text, required GestureTapCallback function}) =>
     GestureDetector(
       child: Container(
-        margin: EdgeInsets.symmetric(
-            horizontal: sizeScreen.width * (50 / designWidth)),
         height: sizeScreen.height * (56 / designHight),
-        width: sizeScreen.width,
+        width: double.infinity,
         decoration: BoxDecoration(
             color: myColor.mainColor, borderRadius: BorderRadius.circular(16)),
         child: Center(
@@ -34,7 +34,6 @@ Widget ScaffoldOnboard(
       backgroundColor: myColor.backgroundColor,
       body: Column(
         children: [
-         
           Container(
             height: sizeScreen.height * (444 / designHight),
             width: sizeScreen.width * (375 / designWidth),
@@ -56,10 +55,26 @@ Widget ScaffoldOnboard(
           SizedBox(
             height: sizeScreen.height * (40 / designHight),
           ),
-          defaultBottom(
-            text: bottomText,
-            function: function,
+          Padding(
+            padding: EdgeInsets.symmetric(
+                horizontal: calcsizew(size: sizeScreen, num: 20)),
+            child: defaultBottom(
+              text: bottomText,
+              function: function,
+            ),
           )
         ],
+      ),
+    );
+
+defualtFloatingActionBotton() => FloatingActionButton(
+      elevation: 0,
+      highlightElevation: 0,
+      backgroundColor: Colors.grey.shade200,
+      onPressed: () {},
+      child: Icon(
+        Icons.chevron_left_outlined,
+        color: Colors.black,
+        size: 35,
       ),
     );

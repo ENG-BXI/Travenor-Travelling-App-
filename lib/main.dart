@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:travenor/Modules/OnboardScreen-2/OnboardScreen-2.dart';
 import 'package:travenor/Modules/OnboardScreen_1/OnboardScreen_1.dart';
 import 'package:travenor/Modules/OnboardScreen_3/OnboardScreen_3.dart';
+import 'package:travenor/Modules/Sign%20In/Sign_In.dart';
 import 'package:travenor/Modules/SplashScreen/SplashScreen.dart';
 import 'package:travenor/shared/style/Colors.dart';
 
@@ -19,13 +20,13 @@ class Travenor extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: SplashScreen_route,
+      initialRoute: Sign_In_router,
       routes: {
         SplashScreen_route: (context) => SplashScreen(),
         OnboardScreen_1_router: (context) => OnboardScreen_1(),
         OnboardScreen_2_router: (context) => OnboardScreen_2(),
         OnboardScreen_3_router: (context) => OnboardScreen_3(),
-   
+        Sign_In_router: (context) => Sign_In(),
       },
     );
   }
