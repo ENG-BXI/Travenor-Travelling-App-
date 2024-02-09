@@ -5,6 +5,7 @@ class myColor {
   static Color backgroundColor = Color(0xfffFFFFFF);
   static Color greyColor = Color(0xffF7F7F9);
   static Color orangeColor = Color(0xffFF7029);
+  
 }
 
 // int x = 5;

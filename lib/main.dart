@@ -1,5 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:travenor/Modules/ForgotPasswordScreen/ForgotPasswordScreen.dart';
+import 'package:travenor/Modules/HomeScreen/HomeScreen.dart';
 import 'package:travenor/Modules/OnboardScreen-2/OnboardScreen-2.dart';
 import 'package:travenor/Modules/OnboardScreen_1/OnboardScreen_1.dart';
 import 'package:travenor/Modules/OnboardScreen_3/OnboardScreen_3.dart';
@@ -21,7 +23,7 @@ class Travenor extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: Sign_Up_router,
+      initialRoute: HomeScreen_router,
       routes: {
         SplashScreen_route: (context) => SplashScreen(),
         OnboardScreen_1_router: (context) => OnboardScreen_1(),
@@ -29,6 +31,8 @@ class Travenor extends StatelessWidget {
         OnboardScreen_3_router: (context) => OnboardScreen_3(),
         Sign_In_router: (context) => Sign_In(),
         Sign_Up_router: (context) => Sign_Up(),
+        ForgotPasswordScreen_router: (context) => ForgotPasswordScreen(),
+        HomeScreen_router: (context) => HomeScreen(),
       },
     );
   }
